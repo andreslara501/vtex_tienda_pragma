@@ -1,0 +1,147 @@
+{
+  "store.home": {
+    "blocks": [
+      "flex-layout.row#banner-content",
+      "tab-layout#categories"
+    ]
+  },
+
+
+
+  "list-context.product-list#demo1": {
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#demo-products"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC"
+    }
+  },
+  "slider-layout#demo-products": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 3,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": "shelf"
+    }
+  },
+
+
+
+  "flex-layout.row#banner-content": {
+    "props": {
+      "blockClass": "banner"
+    },
+    "children": [
+      "flex-layout.col#banner"
+    ]
+  },
+    "flex-layout.col#banner": {
+      "children": [
+        "rich-text#banner__title",
+        "rich-text#banner__text",
+        "rich-text#banner__link"
+      ]
+    },
+      "rich-text#banner__title": {
+        "props": {
+          "text": "Bienvenido a **La Tienda Pragma**",
+          "blockClass": "banner__title"
+        }
+      },
+      "rich-text#banner__text": {
+        "props": {
+          "text": "Estos equipos ya escribieron una historia en Pragma, es hora de reescribir una nueva.",
+          "textAlignment": "CENTER",
+          "blockClass": "banner__text"
+        }
+      },
+      "rich-text#banner__link": {
+        "props": {
+          "text": "[Ir de compras](www.vtex.com.br)",
+          "blockClass": "banner__link",
+          "sssss": "ssss"
+        }
+      },
+
+  "tab-layout#categories": {
+    "props": {
+      "blockClass": "categories"
+    },
+    "children": [
+      "tab-list#categories",
+      "tab-content#categories"
+    ]
+  },
+    "tab-list#categories": {
+      "props": {
+        "blockClass": "tabs-categories"
+      },
+      "children": [
+        "tab-list.item#portatiles",
+        "tab-list.item#monitores"
+      ]
+    },
+      "tab-list.item#portatiles": {
+        "props": {
+          "blockClass": ["tabs-categories__portatiles"],
+          "tabId": "home1",
+          "label": "Portátiles",
+          "defaultActiveTab": true
+        }
+      },
+      "tab-list.item#monitores": {
+        "props": {
+          "blockClass": ["tabs-categories__monitores"],
+          "tabId": "home2",
+          "label": "Monitores"
+        }
+      },
+
+    "tab-content#categories": {
+      "children": [
+        "tab-content.item#home1",
+        "tab-content.item#home2"
+      ]
+    },
+      "tab-content.item#home1": {
+        "children": [
+          "list-context.product-list#demo1"
+        ],
+        "props": {
+          "tabId": "home1"
+        }
+      },
+      "tab-content.item#home2": {
+        "children": [
+          "list-context.product-list#demo1"
+        ],
+        "props": {
+          "tabId": "home2"
+        }
+      },
+
+
+
+
+
+
+
+
+
+  "info-card#home": {
+    "props": {
+      "id": "info-card-home",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "https://storecomponents.vteximg.com.br/arquivos/banner-infocard2.png",
+      "headline": "Clearance Sale",
+      "callToActionText": "DISCOVER",
+      "callToActionUrl": "/sale/d",
+      "blockClass": "info-card-home",
+      "textAlignment": "center"
+    }
+  }
+}

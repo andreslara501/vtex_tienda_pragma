@@ -1,0 +1,51 @@
+.flexRowContent{
+
+}
+
+.flexRowContent--sticky-header {
+  background-image: url(http://latiendapragma.com/wp-content/uploads/2021/10/fondos_virtuales_Pragma_7-1.png);
+  background-size: cover;
+  background-attachment: inherit;
+  background-position: center top;
+  background-repeat: no-repeat;
+  border-bottom-width: 0px;
+  border-bottom-style: solid;
+
+  box-shadow: 0 1px 8px rgba(0,0,0,0.1);
+  height: 90px !important;
+  display: flex;
+  align-items: center;
+}
+
+:global(.vtex-sticky-layout-0-x-container) {
+  width: 100%;
+}
+:global(.vtex-menu-2-x-styledLinkContent) {
+  color: white;
+  text-transform: uppercase;
+}
+
+.flexRow--banner {
+  background-image: url(http://latiendapragma.com/wp-content/uploads/2021/10/fondos_virtuales_Pragma_7-1.png);
+  background-size: cover;
+  background-attachment: inherit;
+  background-position: center -64px;
+  background-repeat: no-repeat;
+  color: white;
+  height: 490px;
+  align-items: center;
+  display: flex;
+}
+  :global(.vtex-store-components-3-x-container) {
+    width: 100%;
+  }
+    :global(.vtex-rich-text-0-x-container--banner__title) {
+      justify-content: center;
+    }
+      :global(.vtex-rich-text-0-x-paragraph--banner__title) {
+        font-size: 2.25em;
+        color: white;
+      }
+
+
+

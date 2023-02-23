@@ -1,0 +1,66 @@
+.container--categories  {
+  padding: 10px;
+  max-width: 1192px;
+  margin: 0px auto;
+}
+  .listContainer--tabs-categories {
+    margin-bottom: 15px;
+  }
+    .listContainer--tabs-categories .listItem {
+      width: 150px;
+      height: 180px;
+      margin: 0px;
+      padding: 0px;
+      margin: 10px 15px;
+      display: flex;
+      justify-content: center;
+      opacity: .7;
+      transition: opacity .25s ease, color .25s ease;
+    }
+      .listContainer--tabs-categories .listItem:hover {
+        opacity: 1;
+      }
+      .listContainer--tabs-categories .listItem:global(.vtex-tab-layout-0-x-listItemActive) {
+        opacity: 1;
+      }
+      .listContainer--tabs-categories .listItem :global(.vtex-button) {
+        border-color: transparent;
+        background: transparent;
+        border: 0px;
+        height: 170px;
+      }
+        .listContainer--tabs-categories .listItem :global(.vtex-button) :global(.vtex-button__label) {
+          align-items: end;
+          color:black;
+          font-size: 16px;
+          font-weight: bold;
+          margin: 0px;
+          padding: 0px;
+          margin-top: 10px;
+          font-family: 'Poppins', sans-serif;
+        }
+          .listContainer--tabs-categories .listItem :global(.vtex-button) :global(.vtex-button__label)::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            transition: width 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.15);
+            background-color: #6f2fd3;
+            margin-top: 7px
+          }
+          .listContainer--tabs-categories .listItem.listItemActive :global(.vtex-button) :global(.vtex-button__label)::after {
+            width: 100%;
+          }
+
+
+      .listContainer--tabs-categories .listItem--tabs-categories__portatiles {
+        background: url("https://latiendapragma.com/wp-content/uploads/2021/10/ordenador-portatil-150x150.png") no-repeat;
+      }
+      .listContainer--tabs-categories .listItem--tabs-categories__monitores {
+        background: url("https://latiendapragma.com/wp-content/uploads/2021/10/monitor-150x150.png") no-repeat;
+      }
+
+
+

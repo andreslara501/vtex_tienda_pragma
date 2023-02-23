@@ -1,0 +1,35 @@
+.container--banner__link {
+  justify-content: center;
+}
+  .paragraph--banner__link {
+    background-color: #32373c;
+    border: none;
+    border-radius: 1.55em;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.125em;
+    padding: .667em 1.333em;
+    text-align: center;
+    overflow-wrap: break-word;
+  }
+
+.container--banner__text {
+  justify-content: center;
+}
+  .paragraph--banner__text {
+    font-size: 14px;
+    color: white;
+  }
+
+
+.paragraph--banner__link{
+  transition: transform .2s ;
+}
+  .paragraph--banner__link:hover{
+    transform: scale(1.2);
+  }
+    .link--banner__link {
+      text-decoration: none;
+      color: white;
+      font-size: 15.75px;
+    }

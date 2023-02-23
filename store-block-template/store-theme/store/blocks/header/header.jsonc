@@ -1,0 +1,190 @@
+{
+  "header": {
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+  "header.full": {
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+  "header-layout.desktop": {
+    "children": [
+      "sticky-layout#desktop"
+    ]
+  },
+  "sticky-layout#desktop": {
+    "props": {
+      "blockClass": "sticky-header"
+    },
+    "children": ["flex-layout.row#desktop"]
+  },
+  "flex-layout.row#desktop": {
+    "props": {
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true,
+      "blockClass": "sticky-header"
+    },
+    "children": [
+      "flex-layout.col#logo-desktop",
+      "flex-layout.col#spacer",
+      "vtex.menu@2.x:menu#menuPrincipal",
+      "search-bar",
+      "locale-switcher",
+      "login",
+      "minicart.v2"
+    ]
+  },
+  "flex-layout.col#spacer": {
+    "props": {
+      "width": "grow"
+    }
+  },
+  "flex-layout.col#logo-desktop": {
+    "props": {
+      "verticalAlign": "middle"
+    },
+    "children": ["logo"]
+  },
+  "logo": {
+    "props": {
+      "title": "Logo",
+      "href": "/",
+      "url": "https://latiendapragma.com/wp-content/uploads/2022/11/logo-tiendapragma-white.png",
+      "width": "120",
+      "blockClass": ["LogoPragma"]
+    }
+  },
+  "header-layout.mobile": {
+    "children": ["sticky-layout#mobile"]
+  },
+  "sticky-layout#mobile": {
+    "children": ["flex-layout.row#mobile"]
+  },
+  "flex-layout.row#mobile": {
+    "children": [
+      "drawer",
+      "logo",
+      "flex-layout.col#spacer",
+      "login",
+      "minicart.v2"
+    ],
+    "props": {
+      "blockClass": "main-header-mobile",
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+  "drawer": {
+    "children": []
+  },
+
+
+
+
+  "vtex.menu@2.x:menu#menuPrincipal": {
+    "children": [
+      "menu-item#menuItemTecnologia-item",
+      "menu-item#menuItemToys-item"
+    ]
+  },
+    "menu-item#menuItemTecnologia-item": {
+      "props": {
+        "id": "menu-item-category-apparel",
+        "type": "custom",
+        "highlight": false,
+        "itemProps": {
+          "type": "internal",
+          "noFollow": false,
+          "tagTitle": "Tecnología",
+          "text": "Tecnología"
+        }
+      },
+      "blocks": [
+        "vtex.menu@2.x:submenu#menuItemTecnologia-item-submenu"
+      ]
+    },
+      "vtex.menu@2.x:submenu#menuItemTecnologia-item-submenu": {
+        "props": {
+          "width": "auto"
+        },
+        "children": [
+          "flex-layout.row#menuItemTecnologia-item-submenu-menu"
+        ]
+      },
+        "flex-layout.row#menuItemTecnologia-item-submenu-menu": {
+          "children": [
+            "flex-layout.col#menuItemTecnologia-item-submenu-menu-col1",
+            "flex-layout.col#menuItemTecnologia-item-submenu-menu-col2"
+          ]
+        },
+          "flex-layout.col#menuItemTecnologia-item-submenu-menu-col1": {
+            "children": ["vtex.menu@2.x:menu#col1-Portatiles"]
+          },
+            "rich-text#col1-portatiles-title": {
+              "props": {
+                "text": "**Portátiles**",
+                "font": "t-small"
+              }
+            },
+            "vtex.menu@2.x:menu#col1-Portatiles": {
+              "props": {
+                "orientation": "vertical"
+              },
+              "children": [
+                "rich-text#col1-portatiles-title",
+                "menu-item#category-apparel-clothing",
+                "menu-item#category-apparel-accessories",
+                "menu-item#category-apparel-eyeglasses"
+              ]
+            },
+
+          "flex-layout.col#menuItemTecnologia-item-submenu-menu-col2": {
+            "children": ["vtex.menu@2.x:menu#col2-monitores"]
+          },
+            "rich-text#col2-monitores-title": {
+              "props": {
+                "text": "**Monitores**",
+                "font": "t-small"
+              }
+            },
+            "vtex.menu@2.x:menu#col2-monitores": {
+              "props": {
+                "orientation": "vertical"
+              },
+              "children": [
+                "rich-text#col2-monitores-title",
+                "menu-item#category-apparel-clothing",
+                "menu-item#category-apparel-accessories",
+                "menu-item#category-apparel-eyeglasses"
+              ]
+            },
+    "menu-item#menuItemToys-item": {
+      "props": {
+        "id": "menu-item-category-apparel",
+        "type": "custom",
+        "highlight": false,
+        "itemProps": {
+          "type": "internal",
+          "noFollow": false,
+          "tagTitle": "Toys",
+          "text": "Toys"
+        }
+      },
+      "blocks": [
+        "vtex.menu@2.x:submenu#menuItemToys-item-submenu"
+      ]
+    },
+      "vtex.menu@2.x:submenu#menuItemToys-item-submenu": {
+        "props": {
+          "width": "auto",
+          "orientation": "vertical"
+        },
+        "children": [
+          "menu-item#category-apparel-clothing",
+          "menu-item#category-apparel-accessories",
+          "menu-item#category-apparel-eyeglasses"
+        ]
+      }
+}
